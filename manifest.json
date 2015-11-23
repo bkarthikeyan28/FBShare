@@ -1,0 +1,29 @@
+{
+  "name": "Word Reminder",
+  "manifest_version": 2,
+  "version": "1.0",
+  "description": "Word Reminder.",
+  "browser_action": {
+    "default_icon": "share.png",
+    "popup":"popup.html"
+  },
+
+  "background": {
+    "scripts": ["shareBackground.js"]
+  },
+
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["share.js"]
+    }
+  ],
+
+  "permissions": [
+    "activeTab",
+    "http://*/*",
+    "https://*/*",
+    "contextMenus",
+    "tabs"
+  ]
+}
