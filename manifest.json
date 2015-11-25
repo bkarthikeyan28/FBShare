@@ -9,14 +9,18 @@
   },
 
   "background": {
-    "scripts": ["shareBackground.js"]
+    "scripts": ["jquery.js", "shareBackground.js"]
   },
 
   "content_scripts": [
     {
       "matches": ["<all_urls>"],
-      "js": ["share.js"]
+      "js": ["jquery.js", "share.js"]
     }
+  ],
+
+  "web_accessible_resources": [
+    "choose.html"
   ],
 
   "permissions": [
